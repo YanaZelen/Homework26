@@ -21,7 +21,6 @@ import javax.persistence.Table;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 public class Ingredients {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,13 +35,4 @@ public class Ingredients {
   @ManyToMany
   private List<Meal> meal;
 
-  public Ingredients(String name, FoodType foodType, int calories) {
-    this.name = name;
-    this.foodType = foodType;
-    this.calories = calories;
-  }
-
-  public String toString() {
-    return name + " " + foodType + " " + calories + " " + meal;
-  }
 }

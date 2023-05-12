@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 public class Waiter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +23,4 @@ public class Waiter {
     @Column
     private String lastName;
 
-    public String toString() {
-        return name + " " + lastName + " ";
-    }
 }

@@ -13,7 +13,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,14 +27,7 @@ public class Orders {
     @OneToOne
     private Waiter waiter;
 
-    @OneToMany(mappedBy="orders")
+    @OneToMany(mappedBy = "orders")
     private List<Meal> meals;
 
-    public Orders(int numberOfOrder) {
-        this.numberOfOrder = numberOfOrder;
-    }
-
-    public String toString() {
-        return numberOfOrder + " " + cafeTable + " " + waiter + " " + meals;
-    }
 }

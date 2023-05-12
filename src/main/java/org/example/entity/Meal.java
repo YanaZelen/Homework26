@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 public class Meal {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +25,4 @@ public class Meal {
   @ManyToOne
   private Orders orders;
 
-  public Meal(String name) {
-    this.name = name;
-  }
-
-  public String toString() {
-    return name + " " + ingredients;
-  }
 }
