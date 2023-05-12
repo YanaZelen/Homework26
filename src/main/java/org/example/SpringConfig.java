@@ -45,7 +45,7 @@ public class SpringConfig {
 
     factoryBean.setHibernateProperties(props);
 
-    factoryBean.setAnnotatedClasses(Waiter.class, CafeTable.class, CafeOrder.class, Meal.class, Ingredients.class);
+    factoryBean.setAnnotatedClasses(Waiter.class, CafeTable.class, Orders.class, Meal.class, Ingredients.class);
     return factoryBean;
   }
 

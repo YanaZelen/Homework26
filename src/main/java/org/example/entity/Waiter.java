@@ -1,6 +1,5 @@
 package org.example.entity;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,15 +24,7 @@ public class Waiter {
     @Column
     private String lastName;
 
-    @OneToOne
-    private CafeOrder cafeOrder;
-
-    public Waiter(String name, String lastName) {
-        this.name = name;
-        this.lastName = lastName;
-    }
-
     public String toString() {
-        return name + " " + lastName + " " + cafeOrder;
+        return name + " " + lastName + " ";
     }
 }

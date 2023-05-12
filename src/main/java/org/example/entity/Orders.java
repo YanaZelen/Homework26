@@ -9,12 +9,12 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "cafeorder", schema = "testbase")
+@Table(name = "orders", schema = "testbase")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
-public class CafeOrder {
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,11 +28,10 @@ public class CafeOrder {
     @OneToOne
     private Waiter waiter;
 
-    @OneToMany
-    @JoinColumn(name = "order_id")
+    @OneToMany(mappedBy="orders")
     private List<Meal> meals;
 
-    public CafeOrder(int numberOfOrder) {
+    public Orders(int numberOfOrder) {
         this.numberOfOrder = numberOfOrder;
     }
 

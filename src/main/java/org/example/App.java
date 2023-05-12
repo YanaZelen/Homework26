@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.dao.WaiterDao;
-import org.example.dao.WaiterDaoHiber;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /*

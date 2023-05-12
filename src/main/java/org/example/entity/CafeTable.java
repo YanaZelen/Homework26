@@ -24,14 +24,14 @@ public class CafeTable {
   private Integer numberOfTable;
 
   @OneToOne
-  private CafeOrder cafeOrder;
+  private Orders orders;
 
   public CafeTable(Integer numberOfTable) {
     this.numberOfTable = numberOfTable;
   }
 
   public String toString() {
-    return numberOfTable + " " + cafeOrder;
+    return numberOfTable + " " + orders;
   }
 
 }
