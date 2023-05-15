@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Waiter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
