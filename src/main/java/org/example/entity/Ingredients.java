@@ -21,6 +21,7 @@ import javax.persistence.Table;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Ingredients {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
