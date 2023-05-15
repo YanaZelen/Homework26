@@ -14,6 +14,7 @@ import javax.persistence.OneToOne;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class CafeTable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
