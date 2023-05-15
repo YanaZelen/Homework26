@@ -13,6 +13,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Meal {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
